@@ -1,0 +1,135 @@
+:root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f5f6fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        padding: 2rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+        
+        h1 {
+            color: #2c3e50;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        animation: fadeIn 0.8s ease-in;
+        }
+        
+        h2 {
+            color: var(--secondary-color);
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .personal-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .personal-info div {
+            display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: transform 0.2s;
+        }
+        
+        .personal-info div:hover {
+        transform: translateX(5px);
+    }
+
+    .social-links {
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .social-links a {
+        color: #2c3e50;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+        color: #3498db;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+        
+        .experience-item h3, .education-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .date {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .personal-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .experience-item, .education-item {
+                padding: 0.8rem;
+            }
+        }
