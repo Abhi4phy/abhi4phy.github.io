@@ -1,46 +1,82 @@
-# Abhishek Yadav - Curriculum Vitae
+# Abhishek Yadav — Portfolio & CV
 
-A clean, responsive CV/resume website built with HTML and CSS.
+A modern, responsive personal portfolio and downloadable CV built with HTML, CSS, and vanilla JavaScript.
 
-## Overview
+🔗 **Live Site:** [abhi4phy.github.io](https://abhi4phy.github.io)
 
-This repository contains my professional CV implemented as a web page. It showcases my work experience, education, technical skills, and contact information in a modern, easy-to-read format.
+---
 
-## Features
+## ✨ Features
 
-- Responsive design that works on desktop and mobile devices
-- Clean and professional layout
-- Multiple sections including:
-  - Work Experience
-  - Education
-  - Technical Skills
-  - Laboratory Skills
-  - Languages
-  - References
+- **Full-screen hero** with gradient background and call-to-action buttons
+- **Sticky glassmorphism navbar** with mobile hamburger menu
+- **Timeline layout** for Experience & Education sections
+- **Skill cards** with icons and pill-shaped tags
+- **Reference cards** with hoverable email buttons
+- **Language proficiency bars** with gradient fills
+- **Scroll-triggered fade-in animations** via Intersection Observer
+- **Downloadable CV** — print-optimized page that exports cleanly to PDF
+- Fully **responsive** on mobile, tablet, and desktop
 
-## Technical Details
+## 📁 Project Structure
 
-- Built with HTML5 and CSS3
-- Uses CSS Grid and Flexbox for layout
-- Implements CSS variables for consistent theming
-- Includes Font Awesome icons for visual elements
-- Supports animations and hover effects
+```
+abhi4phy.github.io/
+├── index.html              # Main portfolio / landing page
+├── style.css               # All styles for the portfolio
+├── cv.html                 # Print-optimized CV (browser-based PDF)
+├── Abhishek_Yadav_CV.tex   # LaTeX source for the CV
+├── Abhishek_Yadav_CV.pdf   # Compiled PDF (downloadable from the site)
+└── README.md               # This file
+```
 
-## Files
+## 🛠️ Tech Stack
 
-- [index.html](index.html) - Minimal version of the CV
-- [style.css](style.css) - Detailed version with full content and styling
+| Layer      | Details                                         |
+|------------|--------------------------------------------------|
+| Markup     | HTML5, semantic sections                         |
+| Styling    | CSS3 — Grid, Flexbox, CSS variables, animations  |
+| Typography | [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts |
+| Icons      | [Font Awesome 6](https://fontawesome.com/)       |
+| JavaScript | Vanilla JS — Intersection Observer, smooth scroll |
 
-## Education
+## 📄 Downloading the CV as PDF
 
-- M.Sc. Solid State Physics from The Institute of Science, University of Mumbai
-- B.Sc. Physics from Rkt College, University of Mumbai
+### Option 1 — Direct download (recommended)
+Click the **"CV"** button in the site's navbar. It downloads `Abhishek_Yadav_CV.pdf` directly.
 
-## Contact
+### Option 2 — Browser print
+1. Open [cv.html](cv.html) in a browser (or click it from the live site).
+2. Press `Ctrl + P` → set destination to **"Save as PDF"** → save.
 
-- Email: yadavabhishek711@gmail.com
-- [LinkedIn Profile](https://www.linkedin.com/in/abhi1yadav/)
+### Re-compiling from LaTeX
+```bash
+pdflatex Abhishek_Yadav_CV.tex
+```
+Requires a TeX distribution (MiKTeX, TeX Live, etc.) with `fontawesome5` package.
 
-## License
+## 🚀 Getting Started
 
-Feel free to use this template for your own CV, but please remove my personal information first.
+```bash
+# Clone the repository
+git clone https://github.com/Abhi4phy/abhi4phy.github.io.git
+
+# Open in browser
+start index.html   # Windows
+open index.html     # macOS
+```
+
+No build step or dependencies required — it's pure HTML/CSS/JS.
+
+## 👤 About
+
+**Abhishek Yadav** — Computational Physicist & Researcher  
+Ph.D. Candidate, UM-DAE CEBS, Mumbai
+
+- 📧 yadavabhishek711@gmail.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/abhi1yadav/)
+- 💻 [GitHub](https://github.com/Abhi4phy)
+
+## 📜 License
+
+Feel free to use this template for your own portfolio/CV — just replace the personal information with your own.

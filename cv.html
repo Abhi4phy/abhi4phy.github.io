@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Yadav - CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ===== Print-optimized CV ===== */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --text: #334155;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        *, *::before, *::after {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.5;
+            color: var(--text);
+            background: #f1f5f9;
+        }
+
+        .cv-page {
+            max-width: 210mm;
+            margin: 4rem auto 1rem;
+            background: #fff;
+            padding: 32px 40px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        .cv-header {
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 18px;
+        }
+
+        .cv-header h1 {
+            font-size: 22pt;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .cv-header .tagline {
+            font-size: 11pt;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .cv-contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px 20px;
+            font-size: 9.5pt;
+            color: var(--text-light);
+        }
+
+        .cv-contact a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Sections */
+        .cv-section {
+            margin-bottom: 16px;
+        }
+
+        .cv-section h2 {
+            font-size: 12pt;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1.5px solid var(--border);
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+        }
+
+        /* Entry rows */
+        .cv-entry {
+            margin-bottom: 12px;
+        }
+
+        .cv-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .cv-entry-header h3 {
+            font-size: 11pt;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .cv-date {
+            font-size: 9.5pt;
+            font-weight: 500;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+
+        .cv-org {
+            font-size: 9.5pt;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+
+        .cv-entry p {
+            font-size: 10pt;
+        }
+
+        .cv-entry ul {
+            margin: 4px 0 0 18px;
+            padding: 0;
+        }
+
+        .cv-entry li {
+            font-size: 10pt;
+            margin-bottom: 2px;
+        }
+
+        /* Skills */
+        .cv-skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .cv-skill-group h3 {
+            font-size: 10pt;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .cv-skill-group p,
+        .cv-skill-group li {
+            font-size: 9.5pt;
+        }
+
+        .cv-skill-group ul {
+            margin: 0 0 0 16px;
+            padding: 0;
+        }
+
+        .cv-skill-group li {
+            margin-bottom: 2px;
+        }
+
+        /* Languages inline */
+        .cv-lang-row {
+            display: flex;
+            gap: 24px;
+            font-size: 10pt;
+        }
+
+        .cv-lang-row span {
+            color: var(--text);
+        }
+
+        .cv-lang-row strong {
+            color: var(--primary);
+        }
+
+        /* References */
+        .cv-ref-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+        }
+
+        .cv-ref {
+            font-size: 9.5pt;
+        }
+
+        .cv-ref h3 {
+            font-size: 10pt;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 2px;
+        }
+
+        .cv-ref p {
+            font-size: 9pt;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .cv-ref a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 9pt;
+        }
+
+        /* Download bar — floating top bar */
+        .download-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.6rem 1.5rem;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+        }
+
+        .download-bar .bar-left {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #94a3b8;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .download-bar .bar-left i {
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .download-bar .bar-left span {
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+
+        .download-bar .bar-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .download-bar button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 1.1rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.25s ease;
+        }
+
+        .btn-print {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn-print:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        }
+
+        .btn-pdf {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 1.1rem;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            font-family: inherit;
+            background: #dc2626;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .btn-pdf:hover {
+            background: #b91c1c;
+            color: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+        }
+
+        .btn-back {
+            background: rgba(255, 255, 255, 0.08);
+            color: #cbd5e1;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            body { background: #fff; }
+            .cv-page {
+                margin: 0; padding: 20px 28px;
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .download-bar { display: none; }
+            @page {
+                margin: 10mm 8mm;
+                size: A4;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cv-page { padding: 20px; }
+            .cv-skills-grid,
+            .cv-ref-grid { grid-template-columns: 1fr; }
+            .cv-entry-header { flex-direction: column; }
+
+            .download-bar {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .download-bar .bar-left { font-size: 0.78rem; }
+            .download-bar .bar-actions { width: 100%; }
+            .download-bar button { flex: 1; justify-content: center; }
+
+            .cv-page { margin-top: 6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="download-bar">
+    <div class="bar-left">
+        <i class="fas fa-file-alt"></i>
+        <span>Abhishek Yadav</span> — Curriculum Vitae
+    </div>
+    <div class="bar-actions">
+        <button class="btn-back" onclick="window.location.href='index.html'">
+            <i class="fas fa-arrow-left"></i> Portfolio
+        </button>
+        <a class="btn-pdf" href="Abhishek_Yadav_CV.pdf" download>
+            <i class="fas fa-file-pdf"></i> Download PDF
+        </a>
+        <button class="btn-print" onclick="window.print()">
+            <i class="fas fa-print"></i> Print
+        </button>
+    </div>
+</div>
+
+<div class="cv-page">
+
+    <!-- Header -->
+    <div class="cv-header">
+        <h1>Abhishek Yadav</h1>
+        <div class="tagline">Computational Physicist &amp; Researcher</div>
+        <div class="cv-contact">
+            <span><a href="mailto:yadavabhishek711@gmail.com">yadavabhishek711@gmail.com</a></span>
+            <span>Mumbai, India</span>
+            <span><a href="https://www.linkedin.com/in/abhi1yadav/"><i class="fab fa-linkedin"></i> abhi1yadav</a></span>
+            <span><a href="https://github.com/Abhi4phy"><i class="fab fa-github"></i> Abhi4phy</a></span>
+        </div>
+    </div>
+
+    <!-- Profile -->
+    <div class="cv-section">
+        <h2>Profile</h2>
+        <p>Computational physicist with expertise in material modeling and plasma physics. Experienced in software development, material simulation, and laboratory techniques. Currently pursuing a Ph.D. with focus on Laser Plasma Interaction at UM-DAE CEBS.</p>
+    </div>
+
+    <!-- Experience -->
+    <div class="cv-section">
+        <h2>Experience</h2>
+
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <h3>Application Engineer</h3>
+                <span class="cv-date">Jan 2023 – Jul 2024</span>
+            </div>
+            <div class="cv-org">DHIO Research and Engineering Pvt Ltd., Bangalore</div>
+            <ul>
+                <li>Material Modelling &amp; Simulation — technical demonstrations to prospects</li>
+                <li>Performed benchmark problems defined by prospective clients</li>
+                <li>Consulting on project execution for Material Modelling Software</li>
+                <li>Customer engagement through in-person meetings and online sessions</li>
+                <li>Attended conferences and technical seminars</li>
+                <li>Environment development, coding, and algorithm design</li>
+                <li>Supported Sales &amp; Marketing on technical feasibility</li>
+            </ul>
+        </div>
+
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <h3>Project Assistant</h3>
+                <span class="cv-date">Nov 2021 – Jan 2023</span>
+            </div>
+            <div class="cv-org">School of Physics, University of Hyderabad</div>
+            <ul>
+                <li>Characterized various samples for Dielectric Properties</li>
+                <li>Maintained instruments and ensured operational functionality</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="cv-section">
+        <h2>Education</h2>
+
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <h3>Ph.D. in Computational Plasma Physics</h3>
+                <span class="cv-date">Aug 2024 – Present</span>
+            </div>
+            <div class="cv-org">Department of Physics, UM-DAE CEBS</div>
+            <p>Research in computational modeling of plasma systems with a focus on Laser Plasma Interaction.</p>
+        </div>
+
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <h3>M.Sc. Solid State Physics</h3>
+                <span class="cv-date">Jul 2018 – Aug 2020</span>
+            </div>
+            <div class="cv-org">The Institute of Science, University of Mumbai | CGPI: 8.14</div>
+            <p>Dissertation: Synthesis and Characterization of x[Co₀.₉Ni₀.₁Fe₂O₄] – (1-x)[Ba(Zr₀.₂Ti₀.₈)O₃] Multiferroic Composite</p>
+        </div>
+
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <h3>B.Sc. Physics</h3>
+                <span class="cv-date">Jul 2015 – Jul 2018</span>
+            </div>
+            <div class="cv-org">Rkt College, University of Mumbai | CGPA: 6.71</div>
+        </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="cv-section">
+        <h2>Technical Skills</h2>
+        <div class="cv-skills-grid">
+            <div class="cv-skill-group">
+                <h3>Programming Languages</h3>
+                <p>Python, FORTRAN 95, C, C++</p>
+            </div>
+            <div class="cv-skill-group">
+                <h3>Simulation Tools</h3>
+                <p>SIESTA/ASAP, OCTA/J-OCTA, LAMMPS</p>
+            </div>
+            <div class="cv-skill-group">
+                <h3>Platforms &amp; Tools</h3>
+                <p>Linux, Windows, Origin, Jupyter Notebook</p>
+            </div>
+            <div class="cv-skill-group">
+                <h3>Laboratory Skills</h3>
+                <ul>
+                    <li>Dielectric Spectroscopy (Novotherm-HT, PHECOS)</li>
+                    <li>UV-Vis Spectroscopy</li>
+                    <li>X-ray Diffraction (XRD)</li>
+                    <li>FTIR</li>
+                    <li>Dynamic Light Scattering (Litesizer 500)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="cv-section">
+        <h2>Languages</h2>
+        <div class="cv-lang-row">
+            <span><strong>Hindi:</strong> Native</span>
+            <span><strong>Marathi:</strong> Working Proficiency</span>
+            <span><strong>English:</strong> Academic Proficiency</span>
+        </div>
+    </div>
+
+    <!-- References -->
+    <div class="cv-section">
+        <h2>References</h2>
+        <div class="cv-ref-grid">
+            <div class="cv-ref">
+                <h3>Dr. Bhooshan Paradkar</h3>
+                <p>Assistant Professor, Physics Dept.</p>
+                <p>UM-DAE CEBS, Mumbai</p>
+                <a href="mailto:bhooshan.paradkar@cbs.ac.in">bhooshan.paradkar@cbs.ac.in</a>
+            </div>
+            <div class="cv-ref">
+                <h3>Dr. Shriniwas B. Kulkarni</h3>
+                <p>Associate Professor, Physics Dept.</p>
+                <p>The Institute of Science (MES)</p>
+                <a href="mailto:sbk_physics@yahoo.com">sbk_physics@yahoo.com</a>
+            </div>
+            <div class="cv-ref">
+                <h3>Dr. A.V. Kadam</h3>
+                <p>Associate Professor, Young Scientist Fellow</p>
+                <p>Dr. Homi Bhabha State University</p>
+                <a href="mailto:anamikasonavane@gmail.com">anamikasonavane@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

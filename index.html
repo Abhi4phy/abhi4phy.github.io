@@ -3,137 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Abhishek Yadav - CV</title>
+    <title>Abhishek Yadav | Computational Physicist</title>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>Abhishek Yadav</h1>
-            <div class="personal-info">  
-                <div><i class="fas fa-envelope"></i>yadavabhishek711@gmail.com</div>
-                <div><i class="fas fa-map-marker-alt"></i> Mumbai, India</div>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">AY</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+        <a href="cv.html" class="nav-cv-btn">
+            <i class="fas fa-file-alt"></i> CV
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Abhishek Yadav</h1>
+            <p class="hero-title">Computational Physicist &amp; Researcher</p>
+            <p class="hero-subtitle">
+                <i class="fas fa-atom fa-spin"></i>
+                Ph.D. Scholar &bull; Laser Plasma Interaction &bull; UM-DAE CEBS
+            </p>
+            <div class="hero-contact">
+                <a href="mailto:yadavabhishek711@gmail.com" class="hero-btn">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/abhi1yadav/" class="hero-btn hero-btn-outline" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/Abhi4phy" class="hero-btn hero-btn-outline" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/abhi1yadav/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/Abhi4phy"><i class="fab fa-github"></i> GitHub</a>
+            <div class="hero-location">
+                <i class="fas fa-map-marker-alt"></i> Mumbai, India
             </div>
         </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </header>
 
-    <section>
-        <h2>Profile</h2>
-        <p class="profile-summary">
-            Computational physicist with expertise in material modeling and plasma physics. Experience in software development, material simulation, and laboratory techniques. Currently pursuing Ph.D. with focus on Laser Plasma Interaction.
-        </p>
-    </section>
-
-    <section>
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Application Engineer</h3>
-            <div class="date">DHIO Research and Engineering Pvt Ltd., Bangalore | Jan 2023 - July 2024 </div>
-            <ul>
-                <li>Learning Material Modelling and Simulation, and technically demonstrating to interested prospects</li>
-                <li>Performing benchmark problems defined by the prospects</li>
-                <li>Consulting project execution related to Material Modelling Software's</li>
-                <li>Meeting customers in person, engaging the technical discussions online or offline </li>
-                <li>Attending conferences and technical seminars</li>
-                <li>Environment development, coding, new algorithm development</li>
-                <li>Supporting the Sales and Marketing team on technical feasibility</li>
-            </ul>
-        </div>
-        
-        <div class="experience-item">
-            <h3>Project Assistant</h3>
-            <div class="date">School of Physics, University of Hyderabad | Nov 2021 - Jan 2023</div>
-            <ul>
-                <li>Characterizing various samples for Dielectric Properties</li>
-                <li>Maintenance of instruments and its functionality</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Education</h2>
-        <div class="education-item">
-            <h3>Ph.D. in Computational Plasma Physics</h3>
-            <div class="date">Department of Physics, UM-DAE CEBS | Aug 2024 – Present</div>
-            <p> Research in computational modeling of plasma systems with a focus on Laser Plasma Interaction</p>
-        </div>
-        <div class="education-item">
-            <h3>M.Sc. Solid State Physics</h3>
-            <div class="date">Department of Physics, The Institute of Science, University of Mumbai | Jul 2018 – Aug 2020</div>
-            <p>Final Grade: 8.14 C.G.P.I</p>
-            <p>Dissertation: Synthesis and Characterization of x[Co0.9Ni0.1Fe2O4] -(1-x) [Ba(Zr0.2Ti0.8)O3] Multiferroic Composite</p>
-        </div>
-
-        <div class="education-item">
-            <h3>B.Sc. Physics</h3>
-            <div class="date">Department of Physics, Rkt College, University of Mumbai | July 2015 – July 2018</div>
-            <p>Final Grade: 6.71 C.G.P.A</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div>
-                <h3>Software Skills</h3>
-                <ul>
-                    <li>Operating Systems: Windows, Linux</li>
-                    <li>Languages: Python,FORTRAN 95, C & C++</li>
-                    <li>Material Simulation: SIESTA/ASAP, OCTA/J-OCTA, LAMMPS</li>
-                    <li>Computational: Origin, Jupyter notebook</li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3>Laboratory Skills</h3>
-                <ul>
-                    <li>Dielectric Spectroscopy [Novotherm-HT, PHECOS]</li>
-                    <li>UV-Vis Spectroscopy</li>
-                    <li>X-ray Diffraction</li>
-                    <li>FTIR</li>
-                    <li>Particle Size Analyser [Litesizer DLS 500]</li>
-                </ul>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-user"></i> About Me</h2>
+            <div class="about-card fade-in">
+                <p class="profile-summary">
+                    Computational physicist with expertise in <strong>material modeling</strong> and <strong>plasma physics</strong>. 
+                    Experienced in software development, material simulation, and laboratory techniques. 
+                    Currently pursuing a <strong>Ph.D.</strong> with focus on <strong>Laser Plasma Interaction</strong> at UM-DAE CEBS.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-microscope"></i>
+                        <span>Material Modeling</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Plasma Physics</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-code"></i>
+                        <span>Scientific Computing</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-flask"></i>
+                        <span>Lab Techniques</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Languages</h2>
-        <ul>
-            <li>Hindi: Mother Tongue</li>
-            <li>Marathi: Working level Proficiency</li>
-            <li>English: All levels of academic programmes of instruction</li>
-        </ul>
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Application Engineer</h3>
+                            <span class="badge">Jan 2023 – Jul 2024</span>
+                        </div>
+                        <p class="timeline-org"><i class="fas fa-building"></i> DHIO Research and Engineering Pvt Ltd., Bangalore</p>
+                        <ul>
+                            <li>Material Modelling &amp; Simulation — technical demonstrations to prospects</li>
+                            <li>Performed benchmark problems defined by prospective clients</li>
+                            <li>Consulting on project execution for Material Modelling Software</li>
+                            <li>Customer engagement through in-person meetings and online sessions</li>
+                            <li>Attended conferences and technical seminars</li>
+                            <li>Environment development, coding, and algorithm design</li>
+                            <li>Supported Sales &amp; Marketing on technical feasibility</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Project Assistant</h3>
+                            <span class="badge">Nov 2021 – Jan 2023</span>
+                        </div>
+                        <p class="timeline-org"><i class="fas fa-university"></i> School of Physics, University of Hyderabad</p>
+                        <ul>
+                            <li>Characterized various samples for Dielectric Properties</li>
+                            <li>Maintained instruments and ensured operational functionality</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h2>References</h2>
-        <div class="experience-item">
-            <h3>Dr. Bhooshan Paradkar</h3>
-            <p>Assistant Professor, Physics Department</p>
-            <p>UM-DAE Centre for Excellence in Basic Sciences, Mumbai</p>
-            <p>Email: bhooshan.paradkar@cbs.ac.in</p>
-        </div>
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Ph.D. in Computational Plasma Physics</h3>
+                            <span class="badge badge-active">Aug 2024 – Present</span>
+                        </div>
+                        <p class="timeline-org"><i class="fas fa-university"></i> Department of Physics, UM-DAE CEBS</p>
+                        <p>Research in computational modeling of plasma systems with a focus on Laser Plasma Interaction.</p>
+                    </div>
+                </div>
 
-        <div class="experience-item">
-            <h3>Dr. Shriniwas B. Kulkarni</h3>
-            <p>Associate Professor, Physics Department</p>
-            <p>Gazetted Officer Class I (MES), The Institute of Science</p>
-            <p>Email: sbk_physics@yahoo.com</p>
-        </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>M.Sc. Solid State Physics</h3>
+                            <span class="badge">Jul 2018 – Aug 2020</span>
+                        </div>
+                        <p class="timeline-org"><i class="fas fa-university"></i> The Institute of Science, University of Mumbai</p>
+                        <p><strong>CGPI:</strong> 8.14</p>
+                        <p class="dissertation"><i class="fas fa-scroll"></i> <strong>Dissertation:</strong> Synthesis and Characterization of x[Co<sub>0.9</sub>Ni<sub>0.1</sub>Fe<sub>2</sub>O<sub>4</sub>] – (1-x)[Ba(Zr<sub>0.2</sub>Ti<sub>0.8</sub>)O<sub>3</sub>] Multiferroic Composite</p>
+                    </div>
+                </div>
 
-        <div class="experience-item">
-            <h3>Dr. A.V. Kadam</h3>
-            <p>Associate Professor, Young Scientist Fellow</p>
-            <p>The Institute of Science, Dr. Homi Bhabha State University</p>
-            <p>Email: anamikasonavane@gmail.com</p>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>B.Sc. Physics</h3>
+                            <span class="badge">Jul 2015 – Jul 2018</span>
+                        </div>
+                        <p class="timeline-org"><i class="fas fa-university"></i> Rkt College, University of Mumbai</p>
+                        <p><strong>CGPA:</strong> 6.71</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        
     </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-cogs"></i> Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">FORTRAN 95</span>
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-card-icon"><i class="fas fa-cube"></i></div>
+                    <h3>Simulation Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag">SIESTA / ASAP</span>
+                        <span class="tag">OCTA / J-OCTA</span>
+                        <span class="tag">LAMMPS</span>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-card-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Platforms &amp; Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Linux</span>
+                        <span class="tag">Windows</span>
+                        <span class="tag">Origin</span>
+                        <span class="tag">Jupyter</span>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-card-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Laboratory</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Dielectric Spectroscopy</span>
+                        <span class="tag">UV-Vis Spectroscopy</span>
+                        <span class="tag">XRD</span>
+                        <span class="tag">FTIR</span>
+                        <span class="tag">DLS (Litesizer 500)</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top:3rem;"><i class="fas fa-language"></i> Languages</h2>
+            <div class="lang-grid fade-in">
+                <div class="lang-item">
+                    <span class="lang-name">Hindi</span>
+                    <span class="lang-level">Native</span>
+                    <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">Marathi</span>
+                    <span class="lang-level">Working Proficiency</span>
+                    <div class="lang-bar"><div class="lang-fill" style="width:75%"></div></div>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">English</span>
+                    <span class="lang-level">Academic Proficiency</span>
+                    <div class="lang-bar"><div class="lang-fill" style="width:90%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="section" id="references">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-user-check"></i> References</h2>
+            <div class="ref-grid">
+                <div class="ref-card fade-in">
+                    <div class="ref-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h3>Dr. Bhooshan Paradkar</h3>
+                    <p class="ref-role">Assistant Professor, Physics Department</p>
+                    <p class="ref-org">UM-DAE Centre for Excellence in Basic Sciences, Mumbai</p>
+                    <a href="mailto:bhooshan.paradkar@cbs.ac.in" class="ref-email">
+                        <i class="fas fa-envelope"></i> bhooshan.paradkar@cbs.ac.in
+                    </a>
+                </div>
+
+                <div class="ref-card fade-in">
+                    <div class="ref-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h3>Dr. Shriniwas B. Kulkarni</h3>
+                    <p class="ref-role">Associate Professor, Physics Department</p>
+                    <p class="ref-org">Gazetted Officer Class I (MES), The Institute of Science</p>
+                    <a href="mailto:sbk_physics@yahoo.com" class="ref-email">
+                        <i class="fas fa-envelope"></i> sbk_physics@yahoo.com
+                    </a>
+                </div>
+
+                <div class="ref-card fade-in">
+                    <div class="ref-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h3>Dr. A.V. Kadam</h3>
+                    <p class="ref-role">Associate Professor, Young Scientist Fellow</p>
+                    <p class="ref-org">The Institute of Science, Dr. Homi Bhabha State University</p>
+                    <a href="mailto:anamikasonavane@gmail.com" class="ref-email">
+                        <i class="fas fa-envelope"></i> anamikasonavane@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="mailto:yadavabhishek711@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/abhi1yadav/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Abhi4phy" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2026 Abhishek Yadav. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ---- Scroll animations ----
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // ---- Sticky navbar shadow on scroll ----
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar')
+                .classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ---- Mobile nav toggle ----
+        const toggle = document.getElementById('navToggle');
+        const navLinks = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navLinks.querySelectorAll('a').forEach(a =>
+            a.addEventListener('click', () => navLinks.classList.remove('open'))
+        );
+
+        // ---- Smooth scroll ----
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

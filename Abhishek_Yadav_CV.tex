@@ -1,0 +1,154 @@
+%-------------------------
+% Abhishek Yadav — CV
+% Compile with: pdflatex Abhishek_Yadav_CV.tex
+%-------------------------
+\documentclass[a4paper,11pt]{article}
+
+% ===== Packages =====
+\usepackage[margin=0.7in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% ===== Colors =====
+\definecolor{accent}{HTML}{2563EB}
+\definecolor{darkgray}{HTML}{1E293B}
+\definecolor{medgray}{HTML}{475569}
+
+% ===== Section Formatting =====
+\titleformat{\section}
+  {\large\bfseries\color{darkgray}\uppercase}
+  {}
+  {0em}
+  {}
+  [\vspace{-0.6em}\textcolor{accent}{\rule{\linewidth}{0.8pt}}]
+
+\titlespacing*{\section}{0pt}{1em}{0.5em}
+
+% ===== Custom Commands =====
+\newcommand{\cventry}[4]{%
+  \noindent\textbf{#1} \hfill \textcolor{accent}{\small #2}\\
+  \textit{\color{medgray}#3}\\
+  #4\vspace{0.4em}
+}
+
+\newcommand{\cventryshort}[3]{%
+  \noindent\textbf{#1} \hfill \textcolor{accent}{\small #2}\\
+  \textit{\color{medgray}#3}\vspace{0.4em}
+}
+
+\newcommand{\contactitem}[2]{%
+  \textcolor{accent}{#1}\enspace #2%
+}
+
+% ===== No page numbers =====
+\pagestyle{empty}
+
+% ===== Document =====
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+  {\LARGE\bfseries\color{darkgray} Abhishek Yadav}\\[4pt]
+  {\color{accent}\normalsize Computational Physicist \& Researcher}\\[8pt]
+  \contactitem{\faEnvelope}{\href{mailto:yadavabhishek711@gmail.com}{yadavabhishek711@gmail.com}}
+  \quad
+  \contactitem{\faMapMarker*}{Mumbai, India}
+  \quad
+  \contactitem{\faLinkedin}{\href{https://www.linkedin.com/in/abhi1yadav/}{abhi1yadav}}
+  \quad
+  \contactitem{\faGithub}{\href{https://github.com/Abhi4phy}{Abhi4phy}}
+\end{center}
+
+% ---------- PROFILE ----------
+\section{Profile}
+Computational physicist with expertise in material modeling and plasma physics.
+Experienced in software development, material simulation, and laboratory techniques.
+Currently pursuing a Ph.D.\ with focus on Laser Plasma Interaction at UM-DAE CEBS.
+
+% ---------- EXPERIENCE ----------
+\section{Experience}
+
+\cventry{Application Engineer}{Jan 2023 -- Jul 2024}
+{DHIO Research and Engineering Pvt Ltd., Bangalore}{%
+\begin{itemize}[leftmargin=1.2em, nosep, topsep=2pt]
+  \item Material Modelling \& Simulation --- technical demonstrations to prospects
+  \item Performed benchmark problems defined by prospective clients
+  \item Consulting on project execution for Material Modelling Software
+  \item Customer engagement through in-person meetings and online sessions
+  \item Attended conferences and technical seminars
+  \item Environment development, coding, and algorithm design
+  \item Supported Sales \& Marketing on technical feasibility
+\end{itemize}}
+
+\cventry{Project Assistant}{Nov 2021 -- Jan 2023}
+{School of Physics, University of Hyderabad}{%
+\begin{itemize}[leftmargin=1.2em, nosep, topsep=2pt]
+  \item Characterized various samples for Dielectric Properties
+  \item Maintained instruments and ensured operational functionality
+\end{itemize}}
+
+% ---------- EDUCATION ----------
+\section{Education}
+
+\cventry{Ph.D.\ in Computational Plasma Physics}{Aug 2024 -- Present}
+{Department of Physics, UM-DAE CEBS}{%
+Research in computational modeling of plasma systems with a focus on Laser Plasma Interaction.}
+
+\cventry{M.Sc.\ Solid State Physics \normalfont{(CGPI: 8.14)}}{Jul 2018 -- Aug 2020}
+{The Institute of Science, University of Mumbai}{%
+\textbf{Dissertation:} Synthesis and Characterization of
+$x[\text{Co}_{0.9}\text{Ni}_{0.1}\text{Fe}_2\text{O}_4]$ --
+$(1-x)[\text{Ba}(\text{Zr}_{0.2}\text{Ti}_{0.8})\text{O}_3]$
+Multiferroic Composite}
+
+\cventryshort{B.Sc.\ Physics \normalfont{(CGPA: 6.71)}}{Jul 2015 -- Jul 2018}
+{Rkt College, University of Mumbai}
+
+% ---------- TECHNICAL SKILLS ----------
+\section{Technical Skills}
+
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+  \textbf{Programming}   & Python, FORTRAN 95, C, C++ \\[3pt]
+  \textbf{Simulation}     & SIESTA/ASAP, OCTA/J-OCTA, LAMMPS \\[3pt]
+  \textbf{Platforms}       & Linux, Windows, Origin, Jupyter Notebook \\[3pt]
+  \textbf{Laboratory}     & Dielectric Spectroscopy (Novotherm-HT, PHECOS), UV-Vis Spectroscopy, \\
+                           & X-ray Diffraction (XRD), FTIR, Dynamic Light Scattering (Litesizer 500) \\
+\end{tabularx}
+
+% ---------- LANGUAGES ----------
+\section{Languages}
+
+\noindent
+\textbf{Hindi:} Native \quad\textbar\quad
+\textbf{Marathi:} Working Proficiency \quad\textbar\quad
+\textbf{English:} Academic Proficiency
+
+% ---------- REFERENCES ----------
+\section{References}
+
+\begin{tabularx}{\textwidth}{@{} X X X @{}}
+  \textbf{Dr.\ Bhooshan Paradkar} &
+  \textbf{Dr.\ Shriniwas B.\ Kulkarni} &
+  \textbf{Dr.\ A.V.\ Kadam} \\
+
+  Asst.\ Professor, Physics Dept. &
+  Assoc.\ Professor, Physics Dept. &
+  Assoc.\ Professor, Young Scientist Fellow \\
+
+  UM-DAE CEBS, Mumbai &
+  The Institute of Science (MES) &
+  Dr.\ Homi Bhabha State University \\
+
+  \href{mailto:bhooshan.paradkar@cbs.ac.in}{\small bhooshan.paradkar@cbs.ac.in} &
+  \href{mailto:sbk_physics@yahoo.com}{\small sbk\_physics@yahoo.com} &
+  \href{mailto:anamikasonavane@gmail.com}{\small anamikasonavane@gmail.com} \\
+\end{tabularx}
+
+\end{document}
