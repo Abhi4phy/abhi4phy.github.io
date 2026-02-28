@@ -71,7 +71,7 @@ No build step or dependencies required — it's pure HTML/CSS/JS.
 ## 👤 About
 
 **Abhishek Yadav** — Computational Physicist & Researcher  
-Ph.D. Candidate, UM-DAE CEBS, Mumbai
+Ph.D. Scholar, UM-DAE CEBS, Mumbai
 
 - 📧 yadavabhishek711@gmail.com
 - 🔗 [LinkedIn](https://www.linkedin.com/in/abhi1yadav/)
